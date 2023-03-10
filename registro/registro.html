@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="registro.css">
+
+    <script>
+        function verificar ()
+        {
+            n = document.getElementById("nome", "sobrenome", "cpf", "data", "email", "telefone", "senha", "confirmar-senha").value ;
+            if ( n.lenght == 0 )
+            {
+                alert("Preencha todos os campos");
+                document.form.focus();
+                return false;
+            }
+
+            document.form.submit();
+        }
+    </script>
+
+</head>
+<body>
+    <header class="header">
+        <a href="/index.html"><img src="/imagens/logo-pizza-hut.png"></a>
+    </header>
+
+
+    <main class="caixa">
+        <div class="circle"></div>
+        <div class="background">
+            <h1>Criar Conta</h1>
+            <br><br>
+            <form class="form" name="form" action="grava.jsp" method="post">
+                <div class="grupo-1">
+                    <div class="campo">
+                        <label for="nome"><strong>Nome*</strong></label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+                    <div class="campo" >
+                       <label for="sobrenome"><strong>Sobrenome*</strong></label>
+                       <input type="text" name="sobrenome" id="sobrenome" required> 
+                    </div>
+                </div>
+                <div class="grupo-2">
+                    <div class="campo">
+                        <label for="cpf"><strong>CPF*</strong></label>
+                        <input type="cpf" name="cpf" id="cpf" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="data"><strong>Data de nascimento*</strong></label>
+                        <input type="date" name="data" id="data" required>
+                    </div>
+                </div>
+                    <div class="campo">
+                        <label><strong>Gênero</strong></label>
+                        <label>
+                            <input type="radio" name="genero" value="masculino" checked> Masculino
+                        </label>
+                        <label>
+                            <input type="radio" name="genero" value="feminino"> Feminino 
+                        </label>
+                        <label>
+                            <input type="radio" name="genero" value="transgenero"> Transgênero
+                        </label>
+                        <label>
+                            <input type="radio" name="genero" value="outro"> Outro
+                        </label>
+                        <label>
+                            <input type="radio" name="genero" value="sem resposta"> Prefiro não responder
+                        </label>
+                       <br>
+                    </div>
+                <div class="grupo-3">
+                    <div class="campo">
+                        <label for="email"><strong>Endereço de e-mail*</strong></label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                       <br>
+                    <div class="campo">
+                        <label for="tel"><strong>Número de telefone*</strong></label>
+                        <input type="telefone" name="telefone" id="telefone" required>
+                    </div>
+                       <br>
+                </div>
+                <div class="grupo-4">    
+                     <div class="campo">
+                        <label for="senha"><strong>Crie uma senha*</strong></label>
+                        <input type="password" name="senha" id="senha" required>
+                    </div>
+        
+                    <div class="campo">
+                        <label for="senha"><strong>Comfirme sua senha*</strong></label>
+                        <input type="password" name="senha" id="confirmar-senha" required>
+                    </div>
+                </div>  
+                
+                <div class="campo-botao">
+                    <button class="botao" type="submit" onsubmit="">Criar Conta</button> 
+                </div>
+
+            </form>
+            <br> <br>
+            
+        </div>
+        
+    </main>
+</body>
+</html>
